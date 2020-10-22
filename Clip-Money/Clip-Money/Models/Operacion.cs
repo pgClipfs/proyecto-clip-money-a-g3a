@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Clip_Money.Models
 {
-    public class Pago
+    public class Operacion
     {
-        public int id_Pago { get; set; }
-        public int Monto { get; set; }
+        public int id_Operacion { get; set; }
+        public string Tipo { get; set; }
+        public string Estado { get; set; }
         public DateTime Fecha { get; set; }
-        public int Tipo { get; set; }
-        public bool Estado { get; set; }
-        public string Alias { get; set; }
-        public string Titular { get; set; }
-        public string CVU { get; set; }
+        public string Descripcion { get; set; }
     }
 }
+
+/*
+ * Falta poner atributo id_Cuenta (FK)
+*/

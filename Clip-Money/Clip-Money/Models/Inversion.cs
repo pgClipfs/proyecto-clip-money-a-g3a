@@ -15,3 +15,7 @@ namespace Clip_Money.Models
 
     }
 }
+
+/*
+ * Falta poner el atributo id_Operacion (FK)
+*/
