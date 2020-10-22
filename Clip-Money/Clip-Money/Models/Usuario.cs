@@ -19,3 +19,7 @@ namespace Clip_Money.Models
         public DateTime Fecha_Registro { get; set; }
     }
 }
+
+/*
+ * Falta agregar atributo Email al script de la BD
+ */
