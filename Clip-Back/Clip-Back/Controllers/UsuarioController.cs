@@ -100,7 +100,8 @@ namespace Clip_Back.Controllers
                 usuarioParaEditar.dni = usuario.dni;
                 usuarioParaEditar.cuenta = usuario.cuenta;
                 usuarioParaEditar.contraseña = usuario.contraseña;
-                usuarioParaEditar.edad = usuario.edad;
+                usuarioParaEditar.fecha_nacimiento = usuario.fecha_nacimiento;
+                usuarioParaEditar.nro_telefono = usuario.nro_telefono;
                 usuarioParaEditar.domicilio = usuario.domicilio;
                 usuarioParaEditar.email = usuario.email;
                 // Una vez realizada la modificación, guardo los cambios

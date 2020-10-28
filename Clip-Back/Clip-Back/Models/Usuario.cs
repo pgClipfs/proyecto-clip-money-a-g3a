@@ -56,13 +56,17 @@ namespace Clip_Back.Models
         /// Edad de la persona
         /// </summary>
         [Required(ErrorMessage = "Debes completar la edad")]
-        public int edad { get; set; }
+        public DateTime fecha_nacimiento { get; set; }
 
         /// <summary>
         /// Domicilio de la persona
         /// </summary>
         [Required(ErrorMessage = "Debes completar el domicilio")]
+        public int nro_telefono { get; set; }
+
+        [Required(ErrorMessage = "Debes completar el domicilio")]
         public string domicilio { get; set; }
+
 
         /// <summary>
         /// Email de la persona
@@ -84,11 +88,16 @@ namespace Clip_Back.Models
             dni = usuario.dni;
             cuenta = usuario.cuenta;
             contraseña = usuario.contraseña;
-            edad = usuario.edad;
+            fecha_nacimiento = usuario.fecha_nacimiento;
+            nro_telefono = usuario.nro_telefono;
             domicilio = usuario.domicilio;
             email = usuario.email;
             fecha_registro = usuario.fecha_registro;
             id_usuario = usuario.id_usuario;
         }
+
+        // REVISAR POR IMPLEMENTACION DE UNA IMAGEN DE DNI
+
+        // IMPLEMENTAR CAMPO PARA NRO DE TELEFONO
     }
 }

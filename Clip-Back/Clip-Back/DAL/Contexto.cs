@@ -28,6 +28,16 @@ namespace Clip_Back.DAL
         public DbSet<Usuario> Usuarios { get; set; }
 
         /// <summary>
+        /// DbSet Moneda
+        /// </summary>
+        public DbSet<Moneda> Monedas { get; set; }
+
+        /// <summary>
+        /// DbSet Operacion
+        /// </summary>
+        public DbSet<Operacion> Operaciones { get; set; }
+
+        /// <summary>
         /// Sobreescritura del metodo "En creacion del modelo"
         /// </summary>
         /// <param name="modelBuilder"></param>

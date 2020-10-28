@@ -29,7 +29,8 @@ namespace Clip_Back.DAL.Entities
             dni = usuario.dni;
             cuenta = usuario.cuenta;
             contraseña = usuario.contraseña;
-            edad = usuario.edad;
+            fecha_nacimiento = usuario.fecha_nacimiento;
+            nro_telefono = usuario.nro_telefono;
             domicilio = usuario.domicilio;
             email = usuario.email;
             fecha_registro = Convert.ToDateTime(usuario.fecha_registro);
@@ -70,7 +71,12 @@ namespace Clip_Back.DAL.Entities
         /// <summary>
         /// Representa la columna edad en la tabla usuario
         /// </summary>
-        public int edad { get; set; }
+        public DateTime fecha_nacimiento { get; set; }
+
+        /// <summary>
+        /// Representa la columna nro_telefono en la tabla usuario
+        /// </summary>
+        public int nro_telefono { get; set; }
 
         /// <summary>
         /// Representa la columna domicilio en la tabla usuario
