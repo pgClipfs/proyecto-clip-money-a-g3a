@@ -83,6 +83,7 @@ namespace Clip_Back.Models
         // Constructor para que funciones la linea de codigo donde trae el listado de usuarios de la db y se pone en una lista para la vista.
         public Usuario(DAL.Entities.Usuario usuario)
         {
+            id_usuario = usuario.id_usuario;
             nombre = usuario.nombre;
             apellido = usuario.apellido;
             dni = usuario.dni;
@@ -93,7 +94,6 @@ namespace Clip_Back.Models
             domicilio = usuario.domicilio;
             email = usuario.email;
             fecha_registro = usuario.fecha_registro;
-            id_usuario = usuario.id_usuario;
         }
 
         // REVISAR POR IMPLEMENTACION DE UNA IMAGEN DE DNI

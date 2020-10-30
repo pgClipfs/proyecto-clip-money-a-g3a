@@ -11,107 +11,107 @@ using Clip_Back.DAL.Entities;
 
 namespace Clip_Back.Controllers
 {
-    public class UsuarioController : Controller
+    public class MonedaController : Controller
     {
         private Contexto db = new Contexto();
 
-        // GET: Usuario
+        // GET: Moneda
         public ActionResult Index()
         {
-            return View(db.Usuarios.ToList());
+            return View(db.Monedas.ToList());
         }
 
-        // GET: Usuario/Details/5
+        // GET: Moneda/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Usuario usuario = db.Usuarios.Find(id);
-            if (usuario == null)
+            Moneda moneda = db.Monedas.Find(id);
+            if (moneda == null)
             {
                 return HttpNotFound();
             }
-            return View(usuario);
+            return View(moneda);
         }
 
-        // GET: Usuario/Create
+        // GET: Moneda/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuario/Create
+        // POST: Moneda/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_usuario,nombre,apellido,dni,cuenta,contraseña,fecha_nacimiento,nro_telefono,domicilio,email,fecha_registro")] Usuario usuario)
+        public ActionResult Create([Bind(Include = "id_moneda,tipo,valoractual")] Moneda moneda)
         {
             if (ModelState.IsValid)
             {
-                db.Usuarios.Add(usuario);
+                db.Monedas.Add(moneda);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(usuario);
+            return View(moneda);
         }
 
-        // GET: Usuario/Edit/5
+        // GET: Moneda/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Usuario usuario = db.Usuarios.Find(id);
-            if (usuario == null)
+            Moneda moneda = db.Monedas.Find(id);
+            if (moneda == null)
             {
                 return HttpNotFound();
             }
-            return View(usuario);
+            return View(moneda);
         }
 
-        // POST: Usuario/Edit/5
+        // POST: Moneda/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_usuario,nombre,apellido,dni,cuenta,contraseña,fecha_nacimiento,nro_telefono,domicilio,email,fecha_registro")] Usuario usuario)
+        public ActionResult Edit([Bind(Include = "id_moneda,tipo,valoractual")] Moneda moneda)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(usuario).State = EntityState.Modified;
+                db.Entry(moneda).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(usuario);
+            return View(moneda);
         }
 
-        // GET: Usuario/Delete/5
+        // GET: Moneda/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Usuario usuario = db.Usuarios.Find(id);
-            if (usuario == null)
+            Moneda moneda = db.Monedas.Find(id);
+            if (moneda == null)
             {
                 return HttpNotFound();
             }
-            return View(usuario);
+            return View(moneda);
         }
 
-        // POST: Usuario/Delete/5
+        // POST: Moneda/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Usuario usuario = db.Usuarios.Find(id);
-            db.Usuarios.Remove(usuario);
+            Moneda moneda = db.Monedas.Find(id);
+            db.Monedas.Remove(moneda);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -29,7 +29,7 @@ namespace Clip_Back.DAL.Entities
             dni = usuario.dni;
             cuenta = usuario.cuenta;
             contraseña = usuario.contraseña;
-            fecha_nacimiento = usuario.fecha_nacimiento;
+            fecha_nacimiento = Convert.ToDateTime(usuario.fecha_nacimiento);
             nro_telefono = usuario.nro_telefono;
             domicilio = usuario.domicilio;
             email = usuario.email;
