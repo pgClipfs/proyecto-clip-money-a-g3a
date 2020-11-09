@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  anio: number;
+  anio: Date;
 
   constructor() {
-    this.anio = new Date().getFullYear();
+    this.anio = new Date();
 
   }
 
