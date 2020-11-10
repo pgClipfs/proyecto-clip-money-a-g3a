@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "clip-money-front"
+  "defaultProject": "clip-money-front",
+  "cli": {
+    "analytics": false
+  }
 }

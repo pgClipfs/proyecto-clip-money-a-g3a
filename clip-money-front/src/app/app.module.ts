@@ -12,15 +12,8 @@ import { RegisterComponent } from './components/shared/register/register.compone
 
 
 // materials //
+import {MaterialModule} from '../app/material.modules';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 // Routes //
@@ -48,14 +41,7 @@ import {APP_ROUTING} from './app-routes';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
-    MatChipsModule,
-    MatButtonModule,
-    MatDatepickerModule,
+    MaterialModule,
     APP_ROUTING
   ],
   providers: [],
