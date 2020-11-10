@@ -56,7 +56,7 @@ namespace Clip_Back.Models
         /// Edad de la persona
         /// </summary>
         [Required(ErrorMessage = "Debes completar la edad")]
-        public DateTime fecha_nacimiento { get; set; }
+        public string fecha_nacimiento { get; set; }
 
         /// <summary>
         /// Domicilio de la persona
@@ -77,7 +77,6 @@ namespace Clip_Back.Models
         /// <summary>
         /// Fecha de registro de la persona
         /// </summary>
-        [Required(ErrorMessage = "Debes completar la fecha de registro")]
         public DateTime fecha_registro = System.DateTime.Now;
 
         // Constructor para que funciones la linea de codigo donde trae el listado de usuarios de la db y se pone en una lista para la vista.
@@ -89,7 +88,7 @@ namespace Clip_Back.Models
             dni = usuario.dni;
             cuenta = usuario.cuenta;
             contraseña = usuario.contraseña;
-            fecha_nacimiento = usuario.fecha_nacimiento;
+            fecha_nacimiento = usuario.fecha_nacimiento.ToString();
             nro_telefono = usuario.nro_telefono;
             domicilio = usuario.domicilio;
             email = usuario.email;
@@ -97,7 +96,5 @@ namespace Clip_Back.Models
         }
 
         // REVISAR POR IMPLEMENTACION DE UNA IMAGEN DE DNI
-
-        // IMPLEMENTAR CAMPO PARA NRO DE TELEFONO
     }
 }

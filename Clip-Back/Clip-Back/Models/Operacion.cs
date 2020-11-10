@@ -50,7 +50,7 @@ namespace Clip_Back.Models
         {
             tipo = operacion.tipo;
             estado = operacion.estado;
-            fecha = Convert.ToDateTime(operacion.fecha);
+            fecha = operacion.fecha;
             descripcion = operacion.descripcion;
         }
     }

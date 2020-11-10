@@ -38,6 +38,38 @@ namespace Clip_Back.DAL
         public DbSet<Operacion> Operaciones { get; set; }
 
         /// <summary>
+        /// DbSet Servicio
+        /// </summary>
+        public DbSet<Servicio> Servicios { get; set; }
+
+        /// <summary>
+        /// DbSet Transferencia
+        /// </summary>
+        public DbSet<Transferencia> Transferencias { get; set; }
+
+        /// <summary>
+        /// DbSet Cuenta
+        /// </summary>
+        public DbSet<Cuenta> Cuentas { get; set; }
+
+
+        /// <summary>
+        /// DbSet Pago
+        /// </summary>
+        public DbSet<Pago> Pagos { get; set; }
+
+        /// <summary>
+        /// DbSet Cuenta
+        /// </summary>
+        public DbSet<Factura> Facturas { get; set; }
+
+        /// <summary>
+        /// DbSet Inversion
+        /// </summary>
+        public DbSet<Inversion> Inversiones { get; set; }
+
+
+        /// <summary>
         /// Sobreescritura del metodo "En creacion del modelo"
         /// </summary>
         /// <param name="modelBuilder"></param>
@@ -47,5 +79,6 @@ namespace Clip_Back.DAL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
+        
     }
 }

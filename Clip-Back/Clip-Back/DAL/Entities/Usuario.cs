@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
 
 namespace Clip_Back.DAL.Entities
 {
@@ -93,5 +95,5 @@ namespace Clip_Back.DAL.Entities
         /// </summary>
         public DateTime fecha_registro { get; set; }
 
-    }
+}
 }

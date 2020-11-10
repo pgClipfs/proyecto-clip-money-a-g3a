@@ -47,12 +47,17 @@ namespace Clip_Back.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_operacion,tipo,estado,fecha,descripcion")] Operacion operacion)
+        public ActionResult Create(Models.Operacion operacion)
         {
             if (ModelState.IsValid)
             {
-                db.Operaciones.Add(operacion);
+                // genero una DAL.Entities.Operacion con un mapeo por constructor con la operacion que viene de la vista
+                DAL.Entities.Operacion nuevaOperacion = new DAL.Entities.Operacion(operacion);
+                // La agrego a la base de datos
+                db.Operaciones.Add(nuevaOperacion);
+                // Y luego guardo los cambios
                 db.SaveChanges();
+                // Una vez que guardo redirecciono al index para volver a la tabla
                 return RedirectToAction("Index");
             }
 
@@ -79,15 +84,25 @@ namespace Clip_Back.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_operacion,tipo,estado,fecha,descripcion")] Operacion operacion)
+        public ActionResult Edit(Models.Operacion operacion)
         {
-            if (ModelState.IsValid)
+            if (operacion.id_operacion == 0)
             {
-                db.Entry(operacion).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            return View(operacion);
+            if (operacion.id_operacion != 0)
+            {
+                // Al estar ante una edición, debemos recuperar el atributo desde la base de datos.
+                DAL.Entities.Operacion operacionParaEditar = db.Operaciones.Where(s => s.id_operacion.Equals(operacion.id_operacion)).FirstOrDefault();
+                // Y luego editar las propiedades reemplazandolas por las que viene en la vista.
+                operacionParaEditar.tipo = operacion.tipo;
+                operacionParaEditar.estado = operacion.estado;
+                operacionParaEditar.descripcion = operacion.descripcion;
+                // Una vez realizada la modificación, guardo los cambios
+                db.SaveChanges();
+                // Y una vez que los cambios se guardaron correctamente, redirecciono al metodo index, para volver a la tabla.
+            }
+            return RedirectToAction("Index");
         }
 
         // GET: Operacion/Delete/5

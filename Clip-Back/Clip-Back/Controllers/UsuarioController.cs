@@ -47,12 +47,17 @@ namespace Clip_Back.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_usuario,nombre,apellido,dni,cuenta,contraseña,fecha_nacimiento,nro_telefono,domicilio,email,fecha_registro")] Usuario usuario)
+        public ActionResult Create(Models.Usuario usuario)
         {
             if (ModelState.IsValid)
             {
-                db.Usuarios.Add(usuario);
+                // genero una DAL.Entities.Persona con un mapeo por constructor con la persona que viene de la vista
+                DAL.Entities.Usuario nuevoUsuario = new DAL.Entities.Usuario(usuario);
+                // La agrego a la base de datos
+                db.Usuarios.Add(nuevoUsuario);
+                // Y luego guardo los cambios
                 db.SaveChanges();
+                // Una vez que guardo redirecciono al index para volver a la tabla
                 return RedirectToAction("Index");
             }
 
@@ -79,15 +84,31 @@ namespace Clip_Back.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_usuario,nombre,apellido,dni,cuenta,contraseña,fecha_nacimiento,nro_telefono,domicilio,email,fecha_registro")] Usuario usuario)
+        public ActionResult Edit(Models.Usuario usuario)
         {
-            if (ModelState.IsValid)
+            if (usuario.id_usuario == 0)
             {
-                db.Entry(usuario).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            return View(usuario);
+            if (usuario.id_usuario != 0)
+            {
+                // Al estar ante una edición, debemos recuperar el atributo desde la base de datos.
+                DAL.Entities.Usuario usuarioParaEditar = db.Usuarios.Where(s => s.id_usuario.Equals(usuario.id_usuario)).FirstOrDefault();
+                // Y luego editar las propiedades reemplazandolas por las que viene en la vista.
+                usuarioParaEditar.nombre = usuario.nombre;
+                usuarioParaEditar.apellido = usuario.apellido;
+                usuarioParaEditar.dni = usuario.dni;
+                usuarioParaEditar.cuenta = usuario.cuenta;
+                usuarioParaEditar.contraseña = usuario.contraseña;
+                usuarioParaEditar.fecha_nacimiento = Convert.ToDateTime(usuario.fecha_nacimiento);
+                usuarioParaEditar.nro_telefono = usuario.nro_telefono;
+                usuarioParaEditar.domicilio = usuario.domicilio;
+                usuarioParaEditar.email = usuario.email;
+                // Una vez realizada la modificación, guardo los cambios
+                db.SaveChanges();
+                // Y una vez que los cambios se guardaron correctamente, redirecciono al metodo index, para volver a la tabla.
+            }
+            return RedirectToAction("Index");
         }
 
         // GET: Usuario/Delete/5
