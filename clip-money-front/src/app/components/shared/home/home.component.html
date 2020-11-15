@@ -1,1 +1,7 @@
 <p>home works!</p>
+<div *ngIf='!this.auth' style="background-color: red; width: 7vw;" (click)="login()">
+ <p>Loguearse</p>
+</div>
+<div *ngIf='this.auth' style="background-color: green; width: 7vw; " (click)="logout()">
+ <p>Desloguearse</p>
+</div>

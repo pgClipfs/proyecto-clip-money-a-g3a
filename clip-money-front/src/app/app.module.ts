@@ -19,6 +19,7 @@ import {MaterialModule} from '../app/material.modules';
 // Routes //
 
 import {APP_ROUTING} from './app-routes';
+import { TestScreenComponent } from './components/test-screen/test-screen.component';
 
 
 // services //
@@ -36,7 +37,8 @@ import {APP_ROUTING} from './app-routes';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    TestScreenComponent
   ],
   imports: [
     BrowserModule,
