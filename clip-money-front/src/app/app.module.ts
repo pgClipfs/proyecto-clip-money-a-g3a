@@ -8,11 +8,15 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { HomeComponent } from './components/shared/home/home.component';
 import { RegisterComponent } from './components/shared/register/register.component';
+import { Register2Component } from './components/shared/register2/register2.component';
+
 
 
 
 // materials //
 import {MaterialModule} from '../app/material.modules';
+
+
 
 
 
@@ -36,7 +40,8 @@ import {APP_ROUTING} from './app-routes';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    Register2Component
   ],
   imports: [
     BrowserModule,

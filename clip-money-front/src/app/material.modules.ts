@@ -8,6 +8,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatIconModule} from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 
@@ -22,6 +27,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatChipsModule,
     MatButtonModule,
     MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule,
+    MatRadioModule,
+    MatGridListModule,
   ],
   exports: [
   BrowserAnimationsModule,
@@ -32,6 +41,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   MatChipsModule,
   MatButtonModule,
   MatDatepickerModule,
+  MatNativeDateModule,
+  MatIconModule,
+  MatRadioModule,
+  MatGridListModule
+
   ]
 })
 
