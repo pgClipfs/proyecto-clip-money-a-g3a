@@ -33,12 +33,17 @@ namespace Clip_Back.Models
         /// </summary> 
         public int monto_ganancia { get; set; }
 
+        public int id_operacion { get; set; }
+
+        public Operacion Operacion { get; set; }
+
         public Inversion(DAL.Entities.Inversion inversion)
         {
             id_inversion = inversion.id_inversion;
             fecha = inversion.fecha;
             monto_capital = inversion.monto_capital;
             monto_ganancia = inversion.monto_ganancia;
+            id_operacion = inversion.id_operacion;
         }
 
     }

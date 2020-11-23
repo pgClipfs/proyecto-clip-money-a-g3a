@@ -47,7 +47,7 @@ namespace Clip_Back.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_servicio,nombre,cvu_servicio")] Servicio servicio)
+        public ActionResult Create([Bind(Include = "id_servicio,nombre,cvu_servicio, Nro_Factura")] Servicio servicio)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace Clip_Back.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_servicio,nombre,cvu_servicio")] Servicio servicio)
+        public ActionResult Edit([Bind(Include = "id_servicio,nombre,cvu_servicio, Nro_Factura")] Servicio servicio)
         {
             if (ModelState.IsValid)
             {

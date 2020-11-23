@@ -33,12 +33,17 @@ namespace Clip_Back.Models
         /// </summary>
         [Required(ErrorMessage = "Ingresa el valor en pesos")]
         public int valoractual { get; set; }
+
+        public int id_inversion { get; set; }
+
+        public Inversion Inversion { get; set; }
      
         // Constructor para que funciones la linea de codigo donde trae el listado de moneda de la db y se pone en una lista para la vista.
         public Moneda(DAL.Entities.Moneda moneda)
         {
             tipo = moneda.tipo;
             valoractual = moneda.valoractual;
+            id_inversion = moneda.id_inversion;
         }
     }
 }

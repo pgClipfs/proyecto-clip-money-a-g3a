@@ -25,6 +25,7 @@ namespace Clip_Back.DAL.Entities
         {
             tipo = moneda.tipo;
             valoractual = moneda.valoractual;
+            id_inversion = moneda.id_inversion;
  
         }
 
@@ -44,6 +45,10 @@ namespace Clip_Back.DAL.Entities
         /// Representa la columna valoractual en la tabla moneda
         /// </summary>
         public int valoractual { get; set; }
+
+        public int id_inversion { get; set; }
+
+        public Inversion Inversion { get; set; }
 
     }
 }

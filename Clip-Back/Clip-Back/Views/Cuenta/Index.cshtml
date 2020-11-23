@@ -23,6 +23,9 @@
         <th>
             @Html.DisplayNameFor(model => model.nro_cuenta)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_Usuario)
+        </th>
         <th></th>
     </tr>
 
@@ -39,6 +42,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.nro_cuenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_Usuario)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id_cuenta }) |

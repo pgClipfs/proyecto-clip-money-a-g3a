@@ -52,6 +52,10 @@ namespace Clip_Back.Models
         [Required(ErrorMessage = "Debes completar el monto de la transferencia")]
         public int monto { get; set; }
 
+        public int id_operacion { get; set; }
+
+        public Operacion Operacion { get; set; } 
+
 
         // Constructor para que funciones la linea de codigo donde trae el listado de transferencias de la db y se pone en una lista para la vista.
         public Transferencia(DAL.Entities.Transferencia transferencia)
@@ -62,9 +66,8 @@ namespace Clip_Back.Models
             cvu_destino = transferencia.cvu_destino;
             cbu_destino = transferencia.cbu_destino;
             monto = transferencia.monto;
+            id_operacion = transferencia.id_operacion;
         }
 
     }
 }
-
-// FALTA PONER EL ATRIBUTO ID_OPERACION(FK)

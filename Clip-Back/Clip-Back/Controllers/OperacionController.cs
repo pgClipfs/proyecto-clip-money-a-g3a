@@ -98,6 +98,7 @@ namespace Clip_Back.Controllers
                 operacionParaEditar.tipo = operacion.tipo;
                 operacionParaEditar.estado = operacion.estado;
                 operacionParaEditar.descripcion = operacion.descripcion;
+                operacionParaEditar.id_cuenta = operacion.id_cuenta;
                 // Una vez realizada la modificación, guardo los cambios
                 db.SaveChanges();
                 // Y una vez que los cambios se guardaron correctamente, redirecciono al metodo index, para volver a la tabla.

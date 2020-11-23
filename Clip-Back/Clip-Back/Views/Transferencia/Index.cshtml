@@ -26,6 +26,9 @@
         <th>
             @Html.DisplayNameFor(model => model.monto)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_operacion)
+        </th>
         <th></th>
     </tr>
 
@@ -47,9 +50,12 @@
             @Html.DisplayFor(modelItem => item.monto)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_transferencia }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_transferencia }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_transferencia })
+            @Html.DisplayFor(modelItem => item.id_operacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id_transferencia }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id_transferencia }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id_transferencia })
         </td>
     </tr>
 }

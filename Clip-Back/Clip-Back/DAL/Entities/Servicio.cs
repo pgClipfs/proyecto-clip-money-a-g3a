@@ -25,6 +25,7 @@ namespace Clip_Back.DAL.Entities
         {
             nombre = servicio.nombre;
             cvu_servicio = servicio.cvu_servicio;
+            Nro_Factura = servicio.Nro_Factura;
         }
 
 
@@ -43,5 +44,9 @@ namespace Clip_Back.DAL.Entities
         /// Representa la columna cvu_servicio en la tabla servicio
         /// </summary>
         public string cvu_servicio { get; set; }
+
+        public int Nro_Factura { get; set; }
+
+        public Factura Factura { get; set; }
     }
 }

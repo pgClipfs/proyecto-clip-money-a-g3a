@@ -23,6 +23,9 @@
         <th>
             @Html.DisplayNameFor(model => model.descripcion)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_cuenta)
+        </th>
         <th></th>
     </tr>
 
@@ -41,9 +44,12 @@
             @Html.DisplayFor(modelItem => item.descripcion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_operacion }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_operacion }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_operacion })
+            @Html.DisplayFor(modelItem => item.id_cuenta)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id_operacion }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id_operacion }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id_operacion })
         </td>
     </tr>
 }

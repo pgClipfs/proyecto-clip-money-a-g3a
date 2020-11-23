@@ -45,6 +45,11 @@ namespace Clip_Back.Models
         [Required(ErrorMessage = "resumen de la operacion")]
         public string descripcion { get; set; }
 
+
+        public int id_cuenta { get; set; }
+
+        public Cuenta Cuenta { get; set; }
+
         // Constructor para que funciones la linea de codigo donde trae el listado de operaciones de la db y se pone en una lista para la vista.
         public Operacion(DAL.Entities.Operacion operacion)
         {
@@ -52,6 +57,7 @@ namespace Clip_Back.Models
             estado = operacion.estado;
             fecha = operacion.fecha;
             descripcion = operacion.descripcion;
+            id_cuenta = operacion.id_cuenta;
         }
     }
 }

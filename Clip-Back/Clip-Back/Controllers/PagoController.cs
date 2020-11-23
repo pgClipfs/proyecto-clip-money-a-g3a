@@ -100,6 +100,7 @@ namespace Clip_Back.Controllers
                 pagoParaEditar.Alias = pago.Alias;
                 pagoParaEditar.Titular = pago.Titular;
                 pagoParaEditar.Cvu = pago.Cvu;
+                pagoParaEditar.id_Servicio = pago.id_Servicio;
                 // Una vez realizada la modificación, guardo los cambios
                 db.SaveChanges();
                 // Y una vez que los cambios se guardaron correctamente, redirecciono al metodo index, para volver a la tabla.

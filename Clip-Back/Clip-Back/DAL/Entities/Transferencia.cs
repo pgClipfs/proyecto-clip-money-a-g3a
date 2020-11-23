@@ -31,6 +31,7 @@ namespace Clip_Back.DAL.Entities
             cvu_destino = transferencia.cvu_destino;
             cbu_destino = transferencia.cbu_destino;
             monto = transferencia.monto;
+            id_operacion = transferencia.id_operacion;
         }
 
 
@@ -64,6 +65,10 @@ namespace Clip_Back.DAL.Entities
         /// Representa la columna monto en la tabla transferencia
         /// </summary>
         public int monto { get; set; }
+
+        public int id_operacion { get; set; }
+
+        public Operacion Operacion { get; set; }
 
     }
 }

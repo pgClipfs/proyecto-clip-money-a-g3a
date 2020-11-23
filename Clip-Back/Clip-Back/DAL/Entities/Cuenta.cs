@@ -29,6 +29,7 @@ namespace Clip_Back.DAL.Entities
             saldo = cuenta.saldo;
             tipo = cuenta.tipo;
             nro_cuenta = cuenta.nro_cuenta;
+            id_Usuario = cuenta.id_Usuario;
         }
 
 
@@ -57,6 +58,9 @@ namespace Clip_Back.DAL.Entities
         /// Representa la columna nro_cuenta en la tabla cuenta
         /// </summary>
         public int nro_cuenta { get; set; }
+
+        public int id_Usuario { get; set; }
+        public Usuario Usuario { get; set; }
 
     }
 }

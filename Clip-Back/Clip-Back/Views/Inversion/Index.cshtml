@@ -20,6 +20,9 @@
         <th>
             @Html.DisplayNameFor(model => model.monto_ganancia)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_operacion)
+        </th>
         <th></th>
     </tr>
 
@@ -35,9 +38,12 @@
             @Html.DisplayFor(modelItem => item.monto_ganancia)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_inversion }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_inversion }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_inversion })
+            @Html.DisplayFor(modelItem => item.id_operacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id_inversion }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id_inversion }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id_inversion })
         </td>
     </tr>
 }

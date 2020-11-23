@@ -17,6 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model.cvu_servicio)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nro_Factura)
+        </th>
         <th></th>
     </tr>
 
@@ -29,9 +32,12 @@
             @Html.DisplayFor(modelItem => item.cvu_servicio)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_servicio }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_servicio }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_servicio })
+            @Html.DisplayFor(modelItem => item.Nro_Factura)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id_servicio }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id_servicio }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id_servicio })
         </td>
     </tr>
 }

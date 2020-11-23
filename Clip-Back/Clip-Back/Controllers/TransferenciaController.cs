@@ -99,6 +99,7 @@ namespace Clip_Back.Controllers
                 transferenciaParaEditar.cvu_destino = transferencia.cvu_destino;
                 transferenciaParaEditar.cbu_destino = transferencia.cbu_destino;
                 transferenciaParaEditar.monto = transferencia.monto;
+                transferenciaParaEditar.id_operacion = transferencia.id_operacion;
                 // Una vez realizada la modificación, guardo los cambios
                 db.SaveChanges();
                 // Y una vez que los cambios se guardaron correctamente, redirecciono al metodo index, para volver a la tabla.

@@ -47,7 +47,7 @@ namespace Clip_Back.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_moneda,tipo,valoractual")] Moneda moneda)
+        public ActionResult Create([Bind(Include = "id_moneda,tipo,valoractual, id_inversion")] Moneda moneda)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace Clip_Back.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_moneda,tipo,valoractual")] Moneda moneda)
+        public ActionResult Edit([Bind(Include = "id_moneda,tipo,valoractual, id_inversion")] Moneda moneda)
         {
             if (ModelState.IsValid)
             {

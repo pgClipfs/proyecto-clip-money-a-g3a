@@ -28,6 +28,7 @@ namespace Clip_Back.DAL.Entities
             fecha = Convert.ToDateTime(inversion.fecha);
             monto_capital = inversion.monto_capital;
             monto_ganancia = inversion.monto_ganancia;
+            id_operacion = inversion.id_operacion;
         }
 
         /// <summary>
@@ -50,5 +51,9 @@ namespace Clip_Back.DAL.Entities
         /// monto resultante
         /// </summary> 
         public int monto_ganancia { get; set; }
+
+        public int id_operacion { get; set; }
+
+        public Operacion Operacion { get; set; }
     }
 }

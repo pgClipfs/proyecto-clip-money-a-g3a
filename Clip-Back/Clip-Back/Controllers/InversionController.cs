@@ -47,7 +47,7 @@ namespace Clip_Back.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_inversion,fecha,monto_capital,monto_ganancia")] Inversion inversion)
+        public ActionResult Create([Bind(Include = "id_inversion,fecha,monto_capital,monto_ganancia, id_operacion")] Inversion inversion)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace Clip_Back.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_inversion,fecha,monto_capital,monto_ganancia")] Inversion inversion)
+        public ActionResult Edit([Bind(Include = "id_inversion,fecha,monto_capital,monto_ganancia, id_operacion")] Inversion inversion)
         {
             if (ModelState.IsValid)
             {

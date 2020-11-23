@@ -47,7 +47,7 @@ namespace Clip_Back.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_cuenta,usuario_cvu,saldo,tipo,nro_cuenta")] Cuenta cuenta)
+        public ActionResult Create([Bind(Include = "id_cuenta,usuario_cvu,saldo,tipo,nro_cuenta, id_Usuario")] Cuenta cuenta)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace Clip_Back.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_cuenta,usuario_cvu,saldo,tipo,nro_cuenta")] Cuenta cuenta)
+        public ActionResult Edit([Bind(Include = "id_cuenta,usuario_cvu,saldo,tipo,nro_cuenta, id_Usuario")] Cuenta cuenta)
         {
             if (ModelState.IsValid)
             {

@@ -58,6 +58,10 @@ namespace Clip_Back.Models
         /// </summary>
         public string Cvu { get; set; }
 
+        public int id_Servicio { get; set; }
+
+        public Servicio Servicio { get; set; }
+
 
         // Constructor para que funciones la linea de codigo donde trae el listado de pagos de la db y se pone en una lista para la vista.
         public Pago(DAL.Entities.Pago pago)
@@ -69,6 +73,7 @@ namespace Clip_Back.Models
             Alias = pago.Alias;
             Titular = pago.Titular;
             Cvu = pago.Cvu;
+            id_Servicio = pago.id_Servicio;
         }
 
     }

@@ -33,14 +33,18 @@ namespace Clip_Back.Models
         [Required(ErrorMessage = "Ingresa el cvu del servicio")]
         public string cvu_servicio { get; set; }
 
+        public int Nro_Factura { get; set; }
+
+        public Factura Factura { get; set; }
+
         // Constructor para que funciones la linea de codigo donde trae el listado de servicios de la db y se pone en una lista para la vista.
         public Servicio(DAL.Entities.Servicio servicio)
         {
             id_servicio = servicio.id_servicio;
             nombre = servicio.nombre;
             cvu_servicio = servicio.cvu_servicio;
+            Nro_Factura = servicio.Nro_Factura;
         }
-        // FALTA PONER FK NRO_FACTURA
     }
 }
 

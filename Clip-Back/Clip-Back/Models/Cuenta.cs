@@ -46,6 +46,10 @@ namespace Clip_Back.Models
         [Required(ErrorMessage = "Debes completar el numero de cuenta")]
         public int nro_cuenta { get; set; }
 
+        public int id_Usuario { get; set; }
+
+        public Usuario Usuario { get; set; }
+
         // Constructor para que funciones la linea de codigo donde trae el listado de cuentas de la db y se pone en una lista para la vista.
         public Cuenta(DAL.Entities.Cuenta cuenta)
         {
@@ -54,9 +58,9 @@ namespace Clip_Back.Models
             saldo = cuenta.saldo;
             tipo = cuenta.tipo;
             nro_cuenta = cuenta.nro_cuenta;
+            id_Usuario = cuenta.id_Usuario;
         }
 
-        // FALTA PONER EL ATRIBUTO ID_USUARIO (FK)
 
     }
 }

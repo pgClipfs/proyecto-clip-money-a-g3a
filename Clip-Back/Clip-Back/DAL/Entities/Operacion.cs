@@ -27,6 +27,7 @@ namespace Clip_Back.DAL.Entities
             estado = operacion.estado;
             fecha = Convert.ToDateTime(operacion.fecha);
             descripcion = operacion.descripcion;
+            id_cuenta = operacion.id_cuenta;
         }
 
         /// <summary>
@@ -54,6 +55,10 @@ namespace Clip_Back.DAL.Entities
         /// Representa la columna descripcion en la tabla operacion
         /// </summary>
         public string descripcion { get; set; }
+
+        public int id_cuenta { get; set; }
+
+        public Cuenta Cuenta { get; set; }
 
     }
 }

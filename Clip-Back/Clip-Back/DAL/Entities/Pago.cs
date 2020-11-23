@@ -31,6 +31,7 @@ namespace Clip_Back.DAL.Entities
             Alias = pago.Alias;
             Titular = pago.Titular;
             Cvu = pago.Cvu;
+            id_Servicio = pago.id_Servicio;
         }
 
         /// <summary>
@@ -73,6 +74,10 @@ namespace Clip_Back.DAL.Entities
         /// Representa la columna Cvu en la tabla pago
         /// </summary>
         public string Cvu { get; set; }
+
+        public int id_Servicio { get; set; }
+
+        public Servicio Servicio { get; set; }
 
 
     }
