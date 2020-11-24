@@ -68,6 +68,7 @@ namespace Clip_Back.DAL
         /// </summary>
         public DbSet<Inversion> Inversiones { get; set; }
 
+        public DbSet<Login> Login { get; set; }
 
         /// <summary>
         /// Sobreescritura del metodo "En creacion del modelo"

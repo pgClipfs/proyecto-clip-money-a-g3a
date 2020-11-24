@@ -607,3 +607,20 @@ C:\Users\Iaio Bessone\Source\Repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back
 C:\Users\Iaio Bessone\Source\Repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\obj\Debug\Clip-Back.csproj.CopyComplete
 C:\Users\Iaio Bessone\Source\Repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\obj\Debug\Clip-Back.dll
 C:\Users\Iaio Bessone\Source\Repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\obj\Debug\Clip-Back.pdb
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.Net.Http.Formatting.dll
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.Web.Cors.dll
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.Web.Http.Cors.dll
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.Web.Http.dll
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.Web.Http.WebHost.dll
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.Net.Http.Formatting.xml
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.Web.Http.xml
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.Web.Http.Cors.xml
+C:\Users\ferre\source\repos\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\bin\System.Web.Http.WebHost.xml
