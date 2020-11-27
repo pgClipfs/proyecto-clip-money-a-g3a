@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from 'src/app/models/cliente';
+import { ValuesService } from 'src/app/services/values.service';
+
 
 @Component({
   selector: 'app-home',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
+    values: Cliente[];
 
-  constructor() { }
+    constructor(private valuesService: ValuesService) { }
 
-  ngOnInit(): void {
+    ngOnInit(): void {
+      this.valuesService.getAll().subscribe(v => {
+        this.values = v;
+      });
+    }
+
   }
-
-}
