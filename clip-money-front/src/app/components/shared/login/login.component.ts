@@ -23,18 +23,19 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/';
-    console.log("aca podemos usarlo");
   }
+
 
   onSubmit(): void {
     this.authenticationService.login(this.usernameControl.value, this.passwordControl.value)
       .subscribe(
-        data => {
-          this.router.navigate([this.returnUrl]);
+          data => {
+              this.router.navigate([this.returnUrl]);
+              console.log("paso el usuario y contraseña");
         },
         error => {
-          this.error = error;
-        }
-      );
+            this.error = error;
+          }
+        );
   }
 }
