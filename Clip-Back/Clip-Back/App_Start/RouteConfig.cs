@@ -17,7 +17,6 @@ namespace Clip_Back
                 name: "Default",
                 url: "{*.}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional}               
-            
             );
         }
     }
