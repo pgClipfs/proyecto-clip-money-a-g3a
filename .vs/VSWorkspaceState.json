@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Clip-Back"
+    "\\Clip-Back",
+    "\\Clip-Back\\Clip-Back",
+    "\\Clip-Back\\Clip-Back\\App_Start"
   ],
-  "SelectedNode": "\\Clip-Back\\Clip-Back.sln",
+  "SelectedNode": "\\Clip-Back\\packages",
   "PreviewInSolutionExplorer": false
 }
