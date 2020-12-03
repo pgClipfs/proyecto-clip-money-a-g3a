@@ -36,7 +36,12 @@ namespace Clip_Back
                 "~/bundles/main.*"
             ));
 
-            bundles.Add(new StyleBundle("~/Content/Styles").Include("~/bundles/styles.*"));
+            bundles.Add(new StyleBundle("~/Content/Styles").Include("~/bundles/styles.*"
+                    "~/Scripts/bootstrap.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                    "~/Content/bootstrap.css",
+                    "~/Content/site.css"));
         }
     }
 }
