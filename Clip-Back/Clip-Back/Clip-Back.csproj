@@ -196,6 +196,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bundles\main.c173f3ff3af2a00cdaae.js" />
+    <Content Include="Bundles\polyfills.b90b5413300b544c277a.js" />
+    <Content Include="Bundles\runtime.acf0dec4155e77772545.js" />
+    <Content Include="Bundles\scripts.533a25923711b987b373.js" />
+    <Content Include="Bundles\styles.32d843a71366612d22b9.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
