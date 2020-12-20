@@ -12,8 +12,8 @@ import { Register2Component } from './components/shared/register2/register2.comp
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
-
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormControl} from "@angular/forms";
 // materials //
 import {MaterialModule} from '../app/material.modules';
 
@@ -49,6 +49,10 @@ import {APP_ROUTING} from './app-routes';
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  
+
     APP_ROUTING
   ],
   providers: [
