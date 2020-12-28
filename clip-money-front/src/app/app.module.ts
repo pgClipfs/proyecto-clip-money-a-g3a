@@ -13,7 +13,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FormControl} from "@angular/forms";
 // materials //
 import {MaterialModule} from '../app/material.modules';
