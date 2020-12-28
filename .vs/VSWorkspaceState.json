@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Clip-Back"
+    "\\Clip-Back",
+    "\\Clip-Back\\Clip-Back",
+    "\\Clip-Back\\Clip-Back\\bundles"
   ],
   "SelectedNode": "\\Clip-Back\\Clip-Back.sln",
   "PreviewInSolutionExplorer": false
