@@ -14,7 +14,6 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 
-
 @NgModule({
 
   imports: [
@@ -29,7 +28,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatNativeDateModule,
     MatIconModule,
     MatRadioModule,
-    MatGridListModule,
+    MatGridListModule
   ],
   exports: [
   BrowserAnimationsModule,
