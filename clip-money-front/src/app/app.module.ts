@@ -25,6 +25,10 @@ import {MaterialModule} from '../app/material.modules';
 
 import {APP_ROUTING} from './app-routes';
 import { SidenavComponent } from './components/shared/sidenav/sidenav.component';
+import { ConsultarComponent } from './components/shared/consultar/consultar.component';
+import { IngresarComponent } from './components/shared/ingresar/ingresar.component';
+import { RetirarComponent } from './components/shared/retirar/retirar.component';
+import { ModificarDatosComponent } from './components/shared/modificar-datos/modificar-datos.component';
 
 
 // services //
@@ -44,7 +48,11 @@ import { SidenavComponent } from './components/shared/sidenav/sidenav.component'
     RegisterComponent,
     HomeComponent,
     Register2Component,
-    SidenavComponent
+    SidenavComponent,
+    ConsultarComponent,
+    IngresarComponent,
+    RetirarComponent,
+    ModificarDatosComponent
   ],
   imports: [
     BrowserModule,

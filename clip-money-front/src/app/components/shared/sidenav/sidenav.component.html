@@ -1,26 +1,31 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button class="botonsin" (click)="showFiller = !showFiller" mat-raised-button>
-      Consultar Saldo
-    </button>
-    <br>
-    <br>
-    <button class="botonsin"(click)="showFiller = !showFiller" mat-raised-button>
+<div class="container">
+    <mat-drawer-container class="example-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+
+            <h2>Nombre Usuario</h2>
+            <br><br><br>
+            <!--p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</!--p-->
+            <button class="botonsin" [routerLink]="['consultar']" mat-raised-button>Consultar Saldo
+            </button>
+            <br>
+            <button class="botonsin" [routerLink]="['ingresar']" mat-raised-button>
       Ingresar Efectivo
     </button>
-    <br>
-    <br>
-    <button class="botonsin" (click)="showFiller = !showFiller" mat-raised-button>
+            <br>
+            <button class="botonsin" [routerLink]="['retirar']" mat-raised-button>
       Retirar Efectivo
     </button>
-  </mat-drawer>
+            <br><br><br><br><br><br>
+            <button class="botonsin" [routerLink]="['modificar-datos']" mat-raised-button>
+        <mat-icon aria-hidden="false" aria-label="Example home icon">build</mat-icon>
+        </button>
+        </mat-drawer>
 
-  <div class="example-sidenav-content">
-    <button class="boton_panel" type="button" mat-button (click)="drawer.toggle()">
+        <div class="example-sidenav-content">
+            <button class="boton_panel" type="button" mat-button (click)="drawer.toggle()">
     ↑
     </button>
-  </div>
+        </div>
 
-</mat-drawer-container>
+    </mat-drawer-container>
+</div>

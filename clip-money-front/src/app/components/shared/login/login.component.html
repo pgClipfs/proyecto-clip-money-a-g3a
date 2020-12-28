@@ -21,7 +21,7 @@
             <input type="checkbox" checked="checked" name="remember"> Recordar cuenta
           </label>
           <div id="div-boton-login">
-            <button id="boton-login" type="button" mat-flat-button color="primary" class="btn btn-outline-primary" >Ingresar</button>
+            <button id="boton-login" type="button" mat-flat-button color="primary" class="btn btn-outline-primary" (click)="onSubmit()">Ingresar</button>
           </div>
           <br>
           <label>
@@ -29,7 +29,7 @@
           </label>
           <br>
           <label>
-            ¿Olvidaste tu contraseña? <a href="#">Clik Aqui</a>
+            ¿Olvidaste? <a href="#">Clik Aqui</a>
           </label>
       </form>
     </div>
