@@ -23,11 +23,20 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/';
+    console.log("aca se esta creando");
   }
 
 
   onSubmit(): void {
+<<<<<<< HEAD
     console.log( this.usernameControl.value)
+=======
+    console.log("llamamos a la funcion onsubmit");
+    console.log("el usuario es" + this.usernameControl.value);
+    console.log("contraseña es " + this.passwordControl.value);
+    // despues borrar todos los console.log
+
+>>>>>>> master
     this.authenticationService.login(this.usernameControl.value, this.passwordControl.value)
       .subscribe(
           data => {

@@ -1,115 +1,110 @@
 <mat-grid-list cols="1" rowHeight="1300px" class="example-container card animated fadeIn">
-    <mat-grid-tile>
+  <mat-grid-tile>
+    <div class="example-container">
+      <br>
+      <h1>Nuevo usuario</h1>
+      <hr>
+      <form  (ngSubmit)="onSubmit()">
 
+        <mat-form-field appearance="fill" class="width-50">
+          <mat-label>Nombre</mat-label>
+          <input matInput [formControl]="registerName">
+        </mat-form-field>
 
+        <mat-form-field appearance="fill" class="width-50 ml-2">
+          <mat-label>Apellido</mat-label>
+          <input matInput [formControl]="registerLastName">
+        </mat-form-field>
+          <!-- ------------------- EMAIL---------------------------------- -->
+        <br>
+        <mat-form-field appearance="fill" class="width-100">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Ex. pat@example.com" [formControl]="registerEmail">
+        </mat-form-field>
+        <br>
+        <!-- -------------------DNI---------------------------------- -->
+        <br>
+        <mat-form-field appearance="fill" class="width-100">
+          <mat-label>DNI</mat-label>
+            <input matInput placeholder="EJ: 12.345.678" [formControl]="registerDni">
+          </mat-form-field>
+          <br>
+        <!-- ---------------------DOMICILIO-------------------------------- -->
+        <br>
+        <mat-form-field appearance="fill" class="width-100">
+          <mat-label>Domicilio</mat-label>
+            <input matInput placeholder="Ej: Calle 123 Barrio" [formControl]="registerHome">
+          </mat-form-field>
+          <br>
+        <!-- ---------------------Telefono-------------------------------- -->
+        <br>
+        <mat-form-field appearance="fill" class="width-100">
+          <mat-label>Numero de telefono personal</mat-label>
+          <input matInput placeholder="Ej: 123456789" type="tel" [formControl]="registerTelephone">
+        </mat-form-field>
+        <br>
+        <hr>
+        <!-- ---------------------Usuario-------------------------------- -->
+        <br>
+        <mat-form-field appearance="fill" class="width-100">
+          <mat-label>Usuario</mat-label>
+          <input matInput placeholder="Ej: usuario123" [formControl]="registerUser">
+        </mat-form-field>
+        <br>
+        <!-- ---------------------Contraseña-------------------------------- -->
 
-        <div class="example-container">
-            <br>
-            <h1>Nuevo usuario</h1>
-            <hr>
-            <mat-form-field appearance="fill" class="width-50">
-                <mat-label>Nombre</mat-label>
-                <input matInput>
-            </mat-form-field>
+        <mat-form-field appearance="fill" class="width-100">
+          <mat-label>Contraseña</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" [formControl]="registerPassword">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <br>
+          <!-- --------------------- repetir Contraseña-------------------------------- -->
 
-            <mat-form-field appearance="fill" class="width-50 ml-2">
-                <mat-label>Apellido</mat-label>
-                <input matInput>
-            </mat-form-field>
-            <!-- ------------------- EMAIL---------------------------------- -->
-            <br>
-            <mat-form-field appearance="fill" class="width-100">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="Ex. pat@example.com">
-            </mat-form-field>
-            <br>
-            <!-- -------------------DNI---------------------------------- -->
-            <br>
-            <mat-form-field appearance="fill" class="width-100">
-                <mat-label>DNI</mat-label>
-                <input matInput placeholder="EJ: 12.345.678">
-            </mat-form-field>
-            <br>
-            <!-- ---------------------DOMICILIO-------------------------------- -->
-            <br>
-            <mat-form-field appearance="fill" class="width-100">
-                <mat-label>Domicilio</mat-label>
-                <input matInput placeholder="Ej: Calle 123 Barrio">
-            </mat-form-field>
-            <br>
-            <!-- ---------------------Telefono-------------------------------- -->
-            <br>
-            <mat-form-field appearance="fill" class="width-100">
-                <mat-label>Numero de telefono personal</mat-label>
-                <input matInput placeholder="Ej: 123456789" type="tel">
-            </mat-form-field>
-            <br>
-            <hr>
-            <!-- ---------------------Usuario-------------------------------- -->
-            <br>
-            <mat-form-field appearance="fill" class="width-100">
-                <mat-label>Usuario</mat-label>
-                <input matInput placeholder="Ej: usuario123">
-            </mat-form-field>
-            <br>
-            <!-- ---------------------Contraseña-------------------------------- -->
+          <mat-form-field appearance="fill" class="width-100">
+            <mat-label>Repetir Contraseña</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" >
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
 
-            <mat-form-field appearance="fill" class="width-100">
-                <mat-label>Contraseña</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-            </mat-form-field>
-            <br>
-            <!-- --------------------- repetir Contraseña-------------------------------- -->
+        <!-- --------------------- Elegir sexo----------------- QUITAR (NO CORRESPONDE)--------------- -->
 
-            <mat-form-field appearance="fill" class="width-100">
-                <mat-label>Repetir Contraseña</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-            </mat-form-field>
+        <!-- --------------------- Elegir fecha de nacimiento y Foto del-------------------------------- -->
 
-            <!-- --------------------- Elegir sexo----------------- QUITAR (NO CORRESPONDE)--------------- -->
-
-            <!-- --------------------- Elegir fecha de nacimiento y Foto del-------------------------------- -->
-
-            <label id="example-radio-group-label">Fecha de nacimiento: </label>
-            <br><br>
-            <mat-form-field appearance="fill">
-                <mat-label>Elige una fecha</mat-label>
-                <input matInput [matDatepicker]="picker">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <br>
-            <mat-label>Foto del DNI</mat-label>
-            <br><br>
-            <!--button type="button primary block">Elije la foto</!--button-->
-            <input type="file" id="file">
-            <br><br><br><br>
-            <label>
-            <input type="checkbox" checked="checked" name="Enviar copia de Registro a la casilla de correos"> Enviar copia de Registro
+        <label id="example-radio-group-label">Fecha de nacimiento: </label>
+        <br><br>
+        <mat-form-field appearance="fill">
+          <mat-label>Elige una fecha</mat-label>
+            <input matInput [matDatepicker]="picker" [formControl]="registerbirthdate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        <br>
+        <mat-label>Foto del DNI</mat-label>
+        <br><br>
+        <!--button type="button primary block">Elije la foto</!--button-->
+        <input type="file" id="file">
+        <br><br><br><br>
+        <label>
+          <input type="checkbox" checked="checked" name="Enviar copia de Registro a la casilla de correos"> Enviar copia de Registro
         </label>
-            <br>
-            <label>
-                    <input type="checkbox" checked="checked" name="Acepto los terminos y condiciones"> Acepto los terminos y condiciones
+        <br>
+        <label>
+          <input type="checkbox" checked="checked" name="Acepto los terminos y condiciones"> Acepto los terminos y condiciones
         </label>
-            <br>
-            <div id="div-boton-login">
-                <button id="boton-login" type="submit" mat-flat-button class="btn btn-outline-primary ">Limpiar valores</button>
-            </div>
-            <br>
-            <div id="div-boton-login">
-                <button id="boton-login" type="submit" mat-flat-button color="primary" class="btn btn-outline-primary ">Registrarme</button>
-            </div>
-
-
-
-
+        <br>
+        <div id="div-boton-login">
+          <button id="boton-login" type="submit" mat-flat-button class="btn btn-outline-primary ">Limpiar valores</button>
         </div>
-
-    </mat-grid-tile>
+        <br>
+        <div id="div-boton-login">
+          <button id="boton-login" type="submit" mat-flat-button color="primary" class="btn btn-outline-primary " (click)="onSubmit()">Registrarme</button>
+        </div>
+      </form>
+    </div>
+  </mat-grid-tile>
 </mat-grid-list>

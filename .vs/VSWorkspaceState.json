@@ -3,7 +3,11 @@
     "",
     "\\Clip-Back",
     "\\Clip-Back\\Clip-Back",
+<<<<<<< HEAD
     "\\Clip-Back\\Clip-Back\\bundles"
+=======
+    "\\Clip-Back\\Clip-Back\\App_Start"
+>>>>>>> master
   ],
   "SelectedNode": "\\Clip-Back\\Clip-Back.sln",
   "PreviewInSolutionExplorer": false
