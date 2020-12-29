@@ -1,0 +1,26 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button class="botonsin" (click)="showFiller = !showFiller" mat-raised-button>
+      Consultar Saldo
+    </button>
+    <br>
+    <br>
+    <button class="botonsin"(click)="showFiller = !showFiller" mat-raised-button>
+      Ingresar Efectivo
+    </button>
+    <br>
+    <br>
+    <button class="botonsin" (click)="showFiller = !showFiller" mat-raised-button>
+      Retirar Efectivo
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button class="boton_panel" type="button" mat-button (click)="drawer.toggle()">
+    ↑
+    </button>
+  </div>
+
+</mat-drawer-container>

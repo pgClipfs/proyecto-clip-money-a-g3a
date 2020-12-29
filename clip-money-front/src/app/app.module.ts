@@ -24,6 +24,7 @@ import {MaterialModule} from '../app/material.modules';
 // Routes //
 
 import {APP_ROUTING} from './app-routes';
+import { SidenavComponent } from './components/shared/sidenav/sidenav.component';
 
 
 // services //
@@ -42,7 +43,8 @@ import {APP_ROUTING} from './app-routes';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    Register2Component
+    Register2Component,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
