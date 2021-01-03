@@ -147,6 +147,7 @@
     <Compile Include="Controllers\CuentaController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\FacturaController.cs" />
+    <Compile Include="Controllers\FileUploadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InversionController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -287,6 +288,7 @@
     <Folder Include=".vs\Clip-Back\v16\" />
     <Folder Include="App_Data\" />
     <Folder Include="Views\Default\" />
+    <Folder Include="Views\FileUploading\" />
     <Folder Include="Views\Login\" />
     <Folder Include="Views\TokenGenerator\" />
   </ItemGroup>

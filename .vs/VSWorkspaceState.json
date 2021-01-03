@@ -3,8 +3,14 @@
     "",
     "\\Clip-Back",
     "\\Clip-Back\\Clip-Back",
-    "\\Clip-Back\\Clip-Back\\App_Start"
+    "\\Clip-Back\\Clip-Back\\Controllers",
+    "\\Clip-Back\\Clip-Back\\Views",
+    "\\Clip-Back\\Clip-Back\\Views\\Home",
+    "\\Clip-Back\\Clip-Back\\Views\\Usuario",
+    "\\clip-money-front",
+    "\\clip-money-front\\maqueta-front",
+    "\\clip-money-front\\maqueta-front\\assets"
   ],
-  "SelectedNode": "\\Clip-Back\\Clip-Back.sln",
+  "SelectedNode": "\\Clip-Back\\Clip-Back\\Controllers\\LoginController.cs",
   "PreviewInSolutionExplorer": false
 }
