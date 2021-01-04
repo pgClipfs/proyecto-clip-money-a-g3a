@@ -36,6 +36,49 @@ namespace Clip_Back.Controllers
             return View(cuenta);
         }
 
+        // Obtener Saldo de la cuenta.
+        [HttpGet]
+        public int ObtenerSaldo(int id_cuenta)
+        {
+            int saldoCuenta;
+
+            Cuenta cuenta = db.Cuentas.Find(id_cuenta);
+
+            saldoCuenta = cuenta.saldo;
+
+            return saldoCuenta;
+        }
+
+        // Ingresar dinero en la cuenta.
+        [HttpPut]
+        public int IngresarSaldo(int id_cuenta, int saldoAIngresar)
+        {
+
+            Cuenta cuenta = db.Cuentas.Find(id_cuenta);
+
+            cuenta.saldo = cuenta.saldo + saldoAIngresar;
+
+            db.SaveChanges();
+
+            return (cuenta.saldo);
+
+        }
+
+        // Retirar dinero en la cuenta.
+        [HttpPut]
+        public int RetirarSaldo(int id_cuenta, int saldoARetirar)
+        {
+
+            Cuenta cuenta = db.Cuentas.Find(id_cuenta);
+
+            cuenta.saldo = cuenta.saldo - saldoARetirar;
+
+            db.SaveChanges();
+
+            return (cuenta.saldo);
+
+        }
+
         // GET: Cuenta/Create
         public ActionResult Create()
         {
