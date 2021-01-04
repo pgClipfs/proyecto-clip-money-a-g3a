@@ -205,3 +205,4 @@ C:\Users\Federico\Documents\CLIP\Proyecto E-wallet\local4\proyecto-clip-money-a-
 C:\Users\Federico\Documents\CLIP\Proyecto E-wallet\local4\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\obj\Debug\Clip-Back.csproj.CopyComplete
 C:\Users\Federico\Documents\CLIP\Proyecto E-wallet\local4\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\obj\Debug\Clip-Back.dll
 C:\Users\Federico\Documents\CLIP\Proyecto E-wallet\local4\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\obj\Debug\Clip-Back.pdb
+C:\Users\Federico\Documents\CLIP\Proyecto E-wallet\local4\proyecto-clip-money-a-g3a\Clip-Back\Clip-Back\obj\Debug\Clip-Back.csprojAssemblyReference.cache
