@@ -1,1 +1,22 @@
-<p>retirar works!</p>
+<mat-grid-list class="consultar_contenedor" cols="1" rowHeight="500px" class="example-container card animated fadeIn">
+    <mat-grid-tile>
+        <div>
+            <h2>Retirar fondos de la cuenta</h2>
+            <br><h3>Saldo actual:</h3>
+            <h3>$ 0.00</h3>
+            <br><h3>Cuanto desea retirar:</h3>
+            <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>Ejemplo: $ 1.000,00 </mat-label>
+                <input matInput #message maxlength="20" placeholder="Ex. I need help with...">
+                <mat-hint align="start"><strong>Solo valores numericos</strong> </mat-hint>
+                <mat-hint align="end">{{message.value.length}} / 20</mat-hint>
+            </mat-form-field>
+            </form>
+            <br><h3>Saldo disponible:</h3>
+            <br><h3> (Operacion saldo - retira) </h3>
+
+        </div>
+
+    </mat-grid-tile>
+</mat-grid-list>

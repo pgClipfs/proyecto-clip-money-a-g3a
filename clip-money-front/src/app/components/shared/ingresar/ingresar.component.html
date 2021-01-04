@@ -1,1 +1,18 @@
-<p>ingresar works!</p>
+<mat-grid-list class="consultar_contenedor" cols="1" rowHeight="200px" class="example-container card animated fadeIn">
+    <mat-grid-tile>
+        <div>
+
+            <h2>Ingrese el monto</h2>
+
+            <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>Ejemplo: $ 1.000,00 </mat-label>
+                <input matInput #message maxlength="20" placeholder="Ex. I need help with...">
+                <mat-hint align="start"><strong>Solo valores numericos</strong> </mat-hint>
+                <mat-hint align="end">{{message.value.length}} / 20</mat-hint>
+            </mat-form-field>
+            </form>
+
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
