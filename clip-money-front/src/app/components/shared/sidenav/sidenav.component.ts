@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthServiceService}from '../../../services/auth-service.service'
 /**
  * @title Autosize sidenav
  */
@@ -11,4 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent {
   showFiller = false;
+  username: string;
+  constructor(private auth : AuthServiceService){
+    this.username = this.auth.user.user;
+  }
 }

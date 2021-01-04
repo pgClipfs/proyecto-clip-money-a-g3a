@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import {AuthServiceService} from 'src/app/services/auth-service.service'
 
 @Component({
   selector: 'app-ingresar',
@@ -6,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ingresar.component.sass']
 })
 export class IngresarComponent implements OnInit {
-
-  constructor() { }
-
+  valorControl = new FormControl('', Validators.required);
+  submitted = false;
+  constructor(private auth: AuthServiceService) { 
+  
+  }
+  onSubmit(){
+    this.auth.sumMoney(this.valorControl.value)
+    this.submitted = true
+    this.valorControl.setValue(0)
+  }
   ngOnInit(): void {
   }
 

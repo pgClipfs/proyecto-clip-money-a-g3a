@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { AuthServiceService } from './services/auth-service.service'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'clip-money-front';
   hide = true;
+  constructor (public auth : AuthServiceService){}
 }
 

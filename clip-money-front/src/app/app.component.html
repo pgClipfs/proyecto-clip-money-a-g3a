@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
-
+<div *ngIf = this.auth.authenticated>
 <app-sidenav></app-sidenav>
+</div>
 <div class="container main-container">
     <router-outlet></router-outlet>
 </div>

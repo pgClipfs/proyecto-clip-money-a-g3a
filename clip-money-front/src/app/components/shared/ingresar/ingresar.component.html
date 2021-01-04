@@ -4,15 +4,17 @@
 
             <h2>Ingrese el monto</h2>
 
-            <form class="example-form">
+            <form  class="example-form" (ngSubmit)="onSubmit()">
             <mat-form-field class="example-full-width">
                 <mat-label>Ejemplo: $ 1.000,00 </mat-label>
-                <input matInput #message maxlength="20" placeholder="Ex. I need help with...">
+                <input [formControl]="valorControl" matInput #message maxlength="20" placeholder="Ex. I need help with...">
                 <mat-hint align="start"><strong>Solo valores numericos</strong> </mat-hint>
                 <mat-hint align="end">{{message.value.length}} / 20</mat-hint>
+                
             </mat-form-field>
             </form>
 
         </div>
+        <div *ngIf='this.submitted'><p style="color: green;">✓</p></div>
     </mat-grid-tile>
 </mat-grid-list>

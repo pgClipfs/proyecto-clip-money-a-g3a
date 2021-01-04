@@ -29,6 +29,7 @@ import { ConsultarComponent } from './components/shared/consultar/consultar.comp
 import { IngresarComponent } from './components/shared/ingresar/ingresar.component';
 import { RetirarComponent } from './components/shared/retirar/retirar.component';
 import { ModificarDatosComponent } from './components/shared/modificar-datos/modificar-datos.component';
+import { TestScreenComponent } from './components/test-screen/test-screen.component';
 
 
 // services //
@@ -52,7 +53,8 @@ import { ModificarDatosComponent } from './components/shared/modificar-datos/mod
     ConsultarComponent,
     IngresarComponent,
     RetirarComponent,
-    ModificarDatosComponent
+    ModificarDatosComponent,
+    TestScreenComponent
   ],
   imports: [
     BrowserModule,
