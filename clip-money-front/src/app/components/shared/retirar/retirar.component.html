@@ -11,11 +11,15 @@
                 <input [formControl]="valorControl" matInput #message maxlength="20" placeholder="0">
                 <mat-hint align="start"><strong>Solo valores numericos</strong> </mat-hint>
                 <mat-hint align="end">{{message.value.length}} / 20</mat-hint>
-                
+
             </mat-form-field>
             </form>
             <br><h3>Saldo disponible:</h3>
             <h3>$ {{parseInt(this.auth.user.money) - parseInt(this.valorControl.value)}}.00</h3>
+            <div id="div-boton-retirar">
+              <button id="boton-retirar" type="button" mat-flat-button color="primary" class="btn btn-outline-primary"
+                (click)="onSubmit()">Retirar</button>
+            </div>
             <div *ngIf='this.submitted'><p style="color: green;">✓</p></div>
             <br><h3> (Operacion saldo - retira) </h3>
 

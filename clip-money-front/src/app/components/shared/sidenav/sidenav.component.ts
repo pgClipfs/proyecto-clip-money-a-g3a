@@ -15,4 +15,9 @@ export class SidenavComponent {
   constructor(private auth : AuthServiceService){
     this.username = this.auth.user.user;
   }
+
+  logOut(){
+    this.auth.logout()
+
+  }
 }

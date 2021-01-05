@@ -3,7 +3,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import {AuthServiceService} from 'src/app/services/auth-service.service'
-@Component({ 
+@Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.sass']
@@ -37,6 +37,8 @@ export class LoginComponent implements OnInit {
     console.log("contraseña es " + this.passwordControl.value);
     // despues borrar todos los console.log
     this.auth.login( this.usernameControl.value , parseInt(this.passwordControl.value))
+
+
     this.authenticationService.login(this.usernameControl.value, this.passwordControl.value)
       .subscribe(
           data => {
@@ -44,8 +46,10 @@ export class LoginComponent implements OnInit {
               console.log("paso el usuario y contraseña");
         },
         error => {
-            this.error = error;
+            // this.error = error;
           }
         );
+      this.usernameControl.setValue("");
+      this.passwordControl.setValue("");
   }
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container ">
     <mat-drawer-container class="example-container" autosize>
         <mat-drawer #drawer class="example-sidenav" mode="side">
 
@@ -18,6 +18,10 @@
             <br><br><br><br><br><br>
             <button class="botonsin" [routerLink]="['modificar-datos']" mat-raised-button>
         <mat-icon aria-hidden="false" aria-label="Example home icon">build</mat-icon>
+        </button>
+        <br>
+        <button class="botonsin" (click)="logOut()" mat-raised-button>
+          Cerrar Sesion
         </button>
         </mat-drawer>
 
