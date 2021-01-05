@@ -2,33 +2,32 @@
     <mat-drawer-container class="example-container" autosize>
         <mat-drawer #drawer class="example-sidenav" mode="side">
 
-            <h2> {{this.username}}</h2>
+            <h2 > {{this.username}}</h2>
             <br><br><br>
             <!--p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</!--p-->
-            <button class="botonsin" [routerLink]="['consultar']" mat-raised-button>Consultar Saldo
+            <button class="botonsin" color="primary" [routerLink]="['consultar']" mat-raised-button>Consultar Saldo
             </button>
             <br>
-            <button class="botonsin" [routerLink]="['ingresar']" mat-raised-button>
+            <button class="botonsin"  color="primary" [routerLink]="['ingresar']" mat-raised-button>
       Ingresar Efectivo
     </button>
             <br>
-            <button class="botonsin" [routerLink]="['retirar']" mat-raised-button>
+            <button class="botonsin"  color="primary" [routerLink]="['retirar']" mat-raised-button>
       Retirar Efectivo
     </button>
             <br><br><br><br><br><br>
             <button class="botonsin" [routerLink]="['modificar-datos']" mat-raised-button>
-        <mat-icon aria-hidden="false" aria-label="Example home icon">build</mat-icon>
+        <mat-icon aria-hidden="false"  color="primary" aria-label="Example home icon">build</mat-icon>
         </button>
         <br>
-        <button class="botonsin" (click)="logOut()" mat-raised-button>
+        <button class="botonsin" [routerLink]="['../login']" color="primary" (click)="logOut()" mat-raised-button>
           Cerrar Sesion
         </button>
         </mat-drawer>
-
         <div class="example-sidenav-content">
-            <button class="boton_panel" type="button" mat-button (click)="drawer.toggle()">
-    ↑
-    </button>
+          <button class="boton_panel" type="button" mat-button (click)="drawer.toggle()">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_forward_ios</mat-icon>
+          </button>
         </div>
 
     </mat-drawer-container>

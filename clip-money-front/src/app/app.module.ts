@@ -7,7 +7,6 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { LoginComponent } from './components/shared/login/login.component';
 import { HomeComponent } from './components/shared/home/home.component';
-import { RegisterComponent } from './components/shared/register/register.component';
 import { Register2Component } from './components/shared/register2/register2.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -46,7 +45,6 @@ import { TestScreenComponent } from './components/test-screen/test-screen.compon
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-    RegisterComponent,
     HomeComponent,
     Register2Component,
     SidenavComponent,

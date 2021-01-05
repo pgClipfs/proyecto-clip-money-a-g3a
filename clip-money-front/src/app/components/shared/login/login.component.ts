@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
     console.log("aca se esta creando");
   }
 
+
   logOut(){
     this.auth.logout()
     console.log('afuera')

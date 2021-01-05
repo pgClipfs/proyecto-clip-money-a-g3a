@@ -1,40 +1,51 @@
-<div *ngIf="!this.auth.authenticated" class="example-container card animated fadeIn">
 
-  <div class="col">
-    <form (ngSubmit)="onSubmit()">
-      <mat-form-field appearance="fill">
-        <mat-label>Usuario</mat-label>
-        <input matInput placeholder="Escriba el Usuario " [formControl]="usernameControl">
-        <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-      </mat-form-field>
-      <br>
-      <br>
-      <mat-form-field appearance="fill">
-        <mat-label>Contraseña</mat-label>
-        <input matInput type="password" placeholder="**************" [formControl]="passwordControl">
-        <!--<mat-hint>Errors appear instantly!</mat-hint>-->
-      </mat-form-field>
-      <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
-      <br>
-      <br>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Recordar cuenta
-      </label>
-      <div id="div-boton-login">
-        <button id="boton-login" type="button" mat-flat-button color="primary" class="btn btn-outline-primary"
-          (click)="onSubmit()">Ingresar</button>
-      </div>
-      <br>
-      <label>
-        <a class="" [routerLink]="['../register']">Registrarse</a>
-      </label>
-      <br>
-      <label>
-        ¿Olvidaste? <a href="#">Clik Aqui</a>
-      </label>
-    </form>
+
+<div class="card">
+  <div class="container text-center">
+    <img src="../../../../assets/CM.png" class="card-img-top " alt="..." style="width: 400px;">
   </div>
+
+  <div *ngIf="!this.auth.authenticated" class="example-container card animated fadeIn">
+
+    <div class="col">
+      <form (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario</mat-label>
+          <input matInput placeholder="Escriba el Usuario " [formControl]="usernameControl">
+          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
+        </mat-form-field>
+        <br>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" placeholder="**************" [formControl]="passwordControl">
+          <!--<mat-hint>Errors appear instantly!</mat-hint>-->
+        </mat-form-field>
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+        <br>
+        <br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Recordar cuenta
+        </label>
+        <div id="div-boton-login">
+          <button id="boton-login" type="button" mat-flat-button color="primary" class="btn btn-outline-primary"
+            (click)="onSubmit()">Ingresar</button>
+        </div>
+        <br>
+        <label>
+          <a class="" [routerLink]="['../register2']">Registrarse</a>
+        </label>
+        <br>
+        <label>
+          ¿Olvidaste? <a href="#">Clik Aqui</a>
+        </label>
+      </form>
+    </div>
+  </div>
+
+
 </div>
-<div *ngIf="this.auth.authenticated" class="example-container card animated fadeIn">
-  <button  id="boton-login" type="button" mat-flat-button color="primary" class="btn btn-outline-primary" (click)="logOut()">Salir</button>
-</div>
+
+
+
+
