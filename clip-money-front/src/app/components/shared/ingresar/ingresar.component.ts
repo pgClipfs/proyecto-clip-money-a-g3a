@@ -9,13 +9,13 @@ import {AuthServiceService} from 'src/app/services/auth-service.service'
 })
 export class IngresarComponent implements OnInit {
   valorControl = new FormControl('', Validators.required);
-  submitted = false;
+  submitted = true;
   constructor(private auth: AuthServiceService) { 
   
   }
   onSubmit(){
     this.auth.sumMoney(this.valorControl.value)
-    this.submitted = true
+    this.submitted = false
     this.valorControl.setValue(0)
   }
   ngOnInit(): void {

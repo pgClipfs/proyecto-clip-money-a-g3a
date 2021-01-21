@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     this.auth.logout()
     console.log('afuera')
   }
-  onSubmit(): void {
+  onSubmit_login(): void {
     console.log("llamamos a la funcion onsubmit");
     console.log("el usuario es" + this.usernameControl.value);
     console.log("contraseña es " + this.passwordControl.value);

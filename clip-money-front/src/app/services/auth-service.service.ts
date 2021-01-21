@@ -21,7 +21,7 @@ interface user{
   }
 
   sumMoney(money){
-    this.userChange.next({...this.user, money: parseInt(this.user.money) + parseInt(money)})
+    this.userChange.next( {...this.user, money: parseInt(this.user.money) + parseInt(money)})
   }
   restMoney(money){
     this.userChange.next({...this.user, money: parseInt(this.user.money) - parseInt(money)})
