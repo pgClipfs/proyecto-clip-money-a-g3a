@@ -29,6 +29,8 @@ import { IngresarComponent } from './components/shared/ingresar/ingresar.compone
 import { RetirarComponent } from './components/shared/retirar/retirar.component';
 import { ModificarDatosComponent } from './components/shared/modificar-datos/modificar-datos.component';
 import { TestScreenComponent } from './components/test-screen/test-screen.component';
+import { MovimientosComponent } from './components/shared/movimientos/movimientos.component';
+import { TransferenciaComponent } from './components/shared/transferencia/transferencia.component';
 
 
 // services //
@@ -52,7 +54,9 @@ import { TestScreenComponent } from './components/test-screen/test-screen.compon
     IngresarComponent,
     RetirarComponent,
     ModificarDatosComponent,
-    TestScreenComponent
+    TestScreenComponent,
+    MovimientosComponent,
+    TransferenciaComponent
   ],
   imports: [
     BrowserModule,

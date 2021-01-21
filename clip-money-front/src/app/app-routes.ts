@@ -6,6 +6,8 @@ import { RetirarComponent } from './components/shared/retirar/retirar.component'
 import { ConsultarComponent } from './components/shared/consultar/consultar.component';
 import { IngresarComponent } from './components/shared/ingresar/ingresar.component';
 import { ModificarDatosComponent } from './components/shared/modificar-datos/modificar-datos.component';
+import { MovimientosComponent } from './components/shared/movimientos/movimientos.component';
+import { TransferenciaComponent } from './components/shared/transferencia/transferencia.component';
 import { TestScreenComponent } from './components/test-screen/test-screen.component';
 import { AuthGuardGuard }from './guards/auth-guard.guard'
 
@@ -18,6 +20,8 @@ const APP_ROUTES: Routes = [
     { path: 'retirar', component: RetirarComponent },
     { path: 'ingresar', component: IngresarComponent },
     { path: 'modificar-datos', component: ModificarDatosComponent },
+    { path: 'movimientos', component: MovimientosComponent },
+    { path: 'transferencia', component: TransferenciaComponent },
     { path: 'test', component: TestScreenComponent, canActivate: [AuthGuardGuard]},
     { path: '**', pathMatch: 'full', redirectTo: 'login' },
 
