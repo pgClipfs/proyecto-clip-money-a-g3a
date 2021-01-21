@@ -1,19 +1,24 @@
-<div class="container ">
-    <mat-drawer-container class="example-container" autosize>
-        <mat-drawer #drawer class="example-sidenav" mode="side">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
 
-            <h2 > {{this.username}}</h2>
-            <br><br><br>
-            <!--p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</!--p-->
-            <button class="botonsin" color="primary" [routerLink]="['consultar']" mat-raised-button>Consultar Saldo
-            </button>
-            <br>
-            <button class="botonsin"  color="primary" [routerLink]="['ingresar']" mat-raised-button>
-      Ingresar Efectivo
-    </button>
+      <h2 > {{this.username}}</h2>
+      <br><br><br>
+      <!--p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</!--p-->
+      <button class="botonsin" color="primary" [routerLink]="['consultar']" mat-raised-button>Consultar Saldo
+      </button>
+      <br>
+      <button class="botonsin"  color="primary" [routerLink]="['ingresar']" mat-raised-button>
+        Ingresar Efectivo
+      </button>
             <br>
             <button class="botonsin"  color="primary" [routerLink]="['retirar']" mat-raised-button>
       Retirar Efectivo
+    </button>
+    <button class="botonsin"  color="primary" [routerLink]="['movimientos']" mat-raised-button>
+      Detalles de movimiento
+    </button>
+    <button class="botonsin"  color="primary" [routerLink]="['transferencia']" mat-raised-button>
+      Transferencia
     </button>
             <br><br><br><br><br><br>
             <button class="botonsin" [routerLink]="['modificar-datos']" mat-raised-button>
@@ -30,5 +35,4 @@
           </button>
         </div>
 
-    </mat-drawer-container>
-</div>
+  </mat-drawer-container>
