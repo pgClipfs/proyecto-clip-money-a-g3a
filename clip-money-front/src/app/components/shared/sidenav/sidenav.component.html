@@ -4,10 +4,10 @@
       <h2 > {{this.username}}</h2>
       <br><br><br>
       <!--p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</!--p-->
-      <button class="botonsin" color="primary"  (click)="drawer.toggle()" [routerLink]="['consultar']" mat-raised-button>Consultar Saldo
+      <button class="botonsin" color="primary"  (click)="drawer.toggle(); " [routerLink]="['consultar']" mat-raised-button>Consultar Saldo
       </button>
       <br>
-      <button class="botonsin"  color="primary" [routerLink]="['ingresar']" (click)="drawer.toggle()" mat-raised-button>
+      <button class="botonsin"  color="primary" [routerLink]="['ingresar']" (click)="drawer.toggle() " mat-raised-button>
         Ingresar Efectivo
       </button>
             <br>
@@ -30,7 +30,7 @@
         </button>
         </mat-drawer>
         <div class="example-sidenav-content">
-          <button class="boton_panel" type="button" mat-button (click)="drawer.toggle()">
+          <button class="boton_panel" type="button" mat-button (click)="drawer.toggle() ;clickDrawer()">
           <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_forward_ios</mat-icon>
           </button>
         </div>
