@@ -1,13 +1,20 @@
-<mat-grid-list cols="1" rowHeight="550px" class="example-container card animated fadeIn">
+<mat-grid-list cols="1" rowHeight="650px" class="example-container card animated fadeIn">
     <mat-grid-tile>
         <div class="example-container">
             <h1>Transferencia a otras cuentas</h1>
             <hr>
+            <h2>Saldo disponible $ {{this.auth.user.money}}.00</h2>
+            <hr>
             <form class="example-form">
                 <mat-form-field class="example-full-width">
                     <mat-label>Monto</mat-label>
-                    <input matInput placeholder="$ 1.000,00" value="$     ">
+                    <input [formControl]="valorControl" matInput placeholder="$ 1.000,00" value="$     ">
                 </mat-form-field>
+                <br>
+                <h3>Saldo restante $ {{parseInt(this.auth.user.money) - parseInt(this.valorControl.value)}}.00</h3>
+                <div *ngIf="parseInt(this.auth.user.money) - parseInt(this.valorControl.value) < 0">
+                    <h3 style="color: red">El monto que intenta transferir excede el saldo disponible en su cuenta</h3>
+                </div>
                 <br><br>
                 <mat-form-field class="example-full-width">
                     <mat-label>Cuenta destino</mat-label>
@@ -41,8 +48,6 @@
                 <br><br>
 
             </form>
-
-
 
             <label>
               <input type="checkbox" checked="checked" name="Enviar comprobante por correo"> Enviar copia de Registro
