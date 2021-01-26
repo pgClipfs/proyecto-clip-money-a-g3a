@@ -5,10 +5,17 @@ interface user{
   money: number,
   user: string
 }
+
+
+
 @Injectable({
   providedIn: 'root'
 })
   export class AuthServiceService {
+
+  monto_deuda = 0;
+  deuda = false;
+  
   user = {user: null, money: null}
   authenticated: boolean;
   authChange: Subject<boolean> = new Subject<boolean>();

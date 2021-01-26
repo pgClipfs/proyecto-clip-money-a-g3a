@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
-import { AuthServiceService}from '../../../services/auth-service.service'
+import { AuthServiceService}from '../../../services/auth-service.service';
+import { AppComponent } from '../../../app.component';
 /**
  * @title Autosize sidenav
  */
@@ -17,16 +18,17 @@ export class SidenavComponent {
   @ViewChild('drawer') drawer: MatDrawer;
 
 
-  constructor(private auth : AuthServiceService,private renderer: Renderer2 ){
+  constructor(private auth : AuthServiceService,private renderer: Renderer2, private comp: AppComponent){
     this.username = this.auth.user.user;
   }
 
   clickDrawer(){
-    console.log(this.drawer)
 
+    this.comp.title = "asdasd"
+    console.log( this.comp.title)
     setTimeout(()=>{
       this.renderer.selectRootElement(this.drawer.toggle());
-  }, 2000);
+  }, 3000);
 
   };
 
@@ -34,7 +36,4 @@ export class SidenavComponent {
     this.auth.logout()
 
   }
-
-
-
 }
