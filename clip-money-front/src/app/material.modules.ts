@@ -13,6 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -31,7 +32,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatIconModule,
     MatRadioModule,
     MatGridListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatMenuModule
   ],
   exports: [
   BrowserAnimationsModule,
@@ -46,7 +48,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
   MatIconModule,
   MatRadioModule,
   MatGridListModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatMenuModule
 
   ]
 })

@@ -1,9 +1,69 @@
-<mat-grid-list class="consultar_contenedor" cols="1" rowHeight="500px" class="example-container card animated fadeIn">
-  <mat-grid-tile>
-    <ul class="list-group list-group-horizontal">
-      <li class="list-group-item">fecha</li>
-      <li class="list-group-item">Descripcion</li>
-      <li class="list-group-item">Mossssssnto</li>
-    </ul>
-  </mat-grid-tile>
+<mat-grid-list cols="1" rowHeight="650px" class="example-container card animated fadeIn">
+    <mat-grid-tile>
+        <div class="example-container">
+            <h1>Transferencia a otras cuentas</h1>
+            <hr>
+            <h2>Saldo disponible $ {{this.auth.user.money}}.00</h2>
+            <hr>
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Monto</mat-label>
+                    <input [formControl]="valorControl" matInput placeholder="$ 1.000,00" value="$     ">
+                </mat-form-field>
+                <br>
+                <h3>Saldo restante $ {{parseInt(this.auth.user.money) - parseInt(this.valorControl.value)}}.00</h3>
+                <div *ngIf="parseInt(this.auth.user.money) - parseInt(this.valorControl.value) < 0">
+                    <h3 style="color: red">El monto que intenta transferir excede el saldo disponible en su cuenta</h3>
+                </div>
+                <br><br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Cuenta destino</mat-label>
+                    <input matInput placeholder="xxxxxx/xx" value="20-">
+                </mat-form-field>
+            </form>
+            <hr>
+            <button mat-button [matMenuTriggerFor]="menu">Concepto</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Alquileres</button>
+                <button mat-menu-item>Aportes de capital</button>
+                <button mat-menu-item>Bienes Reg. Habit</button>
+                <button mat-menu-item>Cuota</button>
+                <button mat-menu-item>Expensas</button>
+                <button mat-menu-item>Factura</button>
+                <button mat-menu-item>Haberes</button>
+                <button mat-menu-item>Honorarios</button>
+                <button mat-menu-item>Aportes de capital</button>
+                <button mat-menu-item>Op.inmob.Habitualista</button>
+                <button mat-menu-item>Op.Inmobiliarias</button>
+                <button mat-menu-item>Prestamo</button>
+                <button mat-menu-item>Seguro</button>
+                <button mat-menu-item>Varios</button>
+            </mat-menu>
+            <hr>
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Descripcion</mat-label>
+                    <textarea matInput placeholder="Descripcion"></textarea>
+                </mat-form-field>
+                <br><br>
+
+            </form>
+
+            <label>
+              <input type="checkbox" checked="checked" name="Enviar comprobante por correo"> Enviar copia de Registro
+            </label>
+            <br>
+            <div id="div-boton-login">
+                <button id="boton-login" type="submit" mat-flat-button class="btn btn-outline-primary ">Limpiar valores</button>
+            </div>
+            <br>
+            <div id="div-boton-login">
+                <button id="boton-login" type="submit" mat-flat-button color="primary" class="btn btn-outline-primary " (click)="onSubmit()">Enviar</button>
+            </div>
+
+        </div>
+    </mat-grid-tile>
 </mat-grid-list>
+
+
+<!--rowHeight="600px"-->
