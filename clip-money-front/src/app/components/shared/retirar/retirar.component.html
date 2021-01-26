@@ -22,7 +22,6 @@
             <div *ngIf="(parseInt(this.auth.user.money) - parseInt(this.valorControl.value))*(-1) > parseInt(this.auth.user.money)*0.1">
                 <h3 style="color: red">El monto que intenta retirar excede el 110% del saldo disponible en su cuenta</h3>
             </div>
-
             <div *ngIf="(parseInt(this.auth.user.money) - parseInt(this.valorControl.value))*(-1) <= parseInt(this.auth.user.money)*0.1" id="div-boton-retirar">
                 <button id="boton-retirar" type="button" mat-flat-button color="primary" class="btn btn-outline-primary" (click)="onSubmit()">Retirar</button>
             </div>
